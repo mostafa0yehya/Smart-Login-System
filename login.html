@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container position-relative vh-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-6 col-lg-4">
+          <div class="content position-relative">
+            <div class="circle circle-top"></div>
+
+            <div class="card">
+              <h1 class="opacity mb-4">Login</h1>
+              <img src="./images/illustration.png" class="login-image" alt="register image" />
+              <form action="" class="login-form">
+                <div class="form-group mb-4">
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                  />
+                </div>
+                <div class="form-group mb-4">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    id="password"
+                    name="password"
+                  />
+                </div>
+                <div class="error-message d-none" id="form-error">
+                  Please fill in all fields correctly.
+                </div>
+                <button class="opacity mb-4" type="submit">Submit</button>
+              </form>
+
+              <div class="link link text-center">
+                <span>Don’t have an account?</span>
+                <a href="./Index.html"> Register </a>
+              </div>
+            </div>
+            <div class="circle circle-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

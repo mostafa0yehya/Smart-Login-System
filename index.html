@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container position-relative vh-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-6 col-lg-4">
+          <div class="content position-relative">
+            <div class="circle circle-top"></div>
+
+            <div class="card">
+              <h1 class="opacity mb-4">Sign Up</h1>
+              <img src="./images/illustration.png" alt="Login image" />
+              <form action="" class="register-form">
+                <div class="form-group mb-4">
+                  <input
+                    type="text"
+                    class="userName"
+                    name="userName"
+                    placeholder="Enter Your Name"
+                  />
+                  <span class="error-message d-none userName-error"></span>
+                </div>
+                <div class="form-group mb-4">
+                  <input
+                    type="text"
+                    class="email"
+                    name="Email"
+                    placeholder="Enter Your Email"
+                  />
+                  <span class="error-message d-none email-error"></span>
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="password"
+                    class="password"
+                    name="Password"
+                    placeholder="Password"
+                  />
+                  <span class="error-message d-none password-error"></span>
+                </div>
+                <button id="signup" class="opacity mb-3">Sign Up</button>
+              </form>
+              <div class="link text-center">
+                <span> You have an account? </span>
+                <a href="./Login.html"> Sign in </a>
+              </div>
+            </div>
+            <div class="circle circle-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/register.js"></script>
+  </body>
+</html>

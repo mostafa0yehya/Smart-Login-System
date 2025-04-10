@@ -1,0 +1,248 @@
+:root {
+  --background: #1a1a2e;
+  --color: #ffffff;
+  --primary-color: #0f3460;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+  background: var(--background);
+  color: var(--color);
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+}
+.card {
+  padding: 30px;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(166, 166, 166, 0.157);
+  backdrop-filter: blur(20px);
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+  z-index: 5;
+}
+
+.opacity {
+  opacity: 0.6;
+}
+form {
+  z-index: 2;
+}
+img {
+  width: 85%;
+  position: absolute;
+  right: -2px;
+  z-index: 1;
+  top: -20%;
+}
+
+input::placeholder {
+  text-transform: uppercase;
+}
+input,
+button {
+  display: block;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+input {
+  background-color: #9191911f;
+  caret-color: white;
+  backdrop-filter: blur(15px);
+  color: white;
+  margin: 0 0 10px;
+}
+input:focus {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+  animation: wobble 0.3s ease-in;
+}
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: absolute;
+}
+
+.circle-top {
+  left: -50px;
+  top: -50px;
+}
+.circle-bottom {
+  right: -50px;
+  bottom: -50px;
+}
+
+.link {
+  color: white;
+  letter-spacing: 1.5px;
+}
+.link a {
+  font-weight: bold;
+}
+/* Animation Keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: scale(1.025);
+  }
+  25% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.toastify {
+  display: flex;
+  align-items: center;
+}
+.custom-toast {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  width: 300px;
+  height: 60px;
+  font-size: 16px;
+  text-align: center;
+}
+.toast-close {
+  position: absolute;
+  background: 0 0;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  opacity: 0.4;
+  padding: 0 5px;
+  top: 50% !important;
+  right: 10px !important;
+  transform: translateY(-50%);
+  margin: 0;
+  width: fit-content;
+}
+
+input.is-valid {
+  border: 2px solid green;
+}
+
+input.is-invalid {
+  border: 2px solid red;
+}
+.error-message {
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+}
+
+input.is-invalid + .error-message {
+  display: block;
+}
+
+/* Animation Keyframes for Circles */
+@keyframes circleTopAnim {
+  0% {
+    top: -50px;
+    left: -50px;
+    opacity: 1;
+  }
+  50% {
+    top: 20px;
+    left: 20px;
+    opacity: 0.5;
+  }
+  100% {
+    top: -50px;
+    left: -50px;
+    opacity: 1;
+  }
+}
+
+@keyframes circleBottomAnim {
+  0% {
+    bottom: -50px;
+    right: -50px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: -50px;
+    right: -50px;
+    opacity: 1;
+  }
+}
+
+/* Apply the animations to the circles */
+.circle-top {
+  animation: circleTopAnim 15s ease-in-out infinite;
+}
+
+.circle-bottom {
+  animation: circleBottomAnim 15s ease-in-out infinite;
+}
+
+@media (max-width: 576px) {
+  .circle {
+    display: none;
+  }
+  img{
+    width: 65%;
+  }
+}
+
+#logout {
+  margin: 20px 0;
+  position: absolute;
+  right: 0;
+}
